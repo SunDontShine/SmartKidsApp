@@ -1,6 +1,21 @@
 const express = require('express')
 const app = express()
 
+var con = require('./model/mysql_connector.js')
+
+/*var mysql = require('mysql')
+var con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password'
+})
+
+con.connect(function(err){
+ if(err) throw err;
+ console.log("Connected to Local Database!")
+})
+*/
+
 app.set('views','./views');
 app.set('view engine', 'pug');
 
