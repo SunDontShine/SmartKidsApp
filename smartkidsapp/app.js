@@ -3,19 +3,6 @@ const app = express()
 
 var con = require('./model/mysql_connector.js')
 
-/*var mysql = require('mysql')
-var con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password'
-})
-
-con.connect(function(err){
- if(err) throw err;
- console.log("Connected to Local Database!")
-})
-*/
-
 app.set('views','./views');
 app.set('view engine', 'pug');
 
@@ -25,25 +12,28 @@ app.get('/', function (req, res){
 })
 
 app.get('/login', function (req, res){
-  res.send('Hello world at /login')
   console.log("User at /login")
+  res.render('login')
 })
 
 //list of available subjects  
-app.get('/subject', function (req, res){
-  res.send('Hello world at /subject')
-  console.log("User at /subject")
+app.get('/quizzes', function (req, res){
+  console.log("Quizzes page accessed")
+  res.render('quizzes')
 })
 
 app.get('/math', function (req, res){
-  res.send('Hello world at /math')
-  console.log("User at /math")
+  console.log("Math page accessed")
 })
 
 //list of cool hobbies such as gardening cam, security cam
 app.get('/hobbies', function (req, res){
-  res.send('Hello world at /hobbies')
-  console.log("User at /hobbies")
+  console.log("Hobbies page accessed")
+})
+
+app.get('/garden', function (req, res){
+  console.log("Garden page accessed")
+  res.render('garden')
 })
 
 
