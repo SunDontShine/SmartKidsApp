@@ -1,0 +1,25 @@
+include header.pug
+div(class='row')
+ div(class='col-md-12')
+ div(id='popup' class='collapse') 
+   div(class='alert alert-danger') That quiz is currently under construction
+div(class='row')
+ div(class='col-md-4')
+ div(class='col-md-4')
+  div(class='row')
+   div(class='col-md-12') 
+    h1(class='text-center') Math
+   div(class='row')  
+    form(action='quiz' method='GET')
+     div(class='col-md-3')
+      button(type='submit' name='subject' value='add' class='btn btn-success' role='button' data-toggle='collapse' data-target='#popup') Addition
+     div(class='col-md-3')
+      button(type='submit' name='subject' value='subtract' class='btn btn-success' role='button' data-toggle='collapse' data-target='#popup') Subtraction
+     div(class='col-md-3')
+      button(type='submit' name='subject' value='multiply' class='btn btn-success' role='button' data-toggle='collapse' data-target='#popup') Multiplication
+     div(class='col-md-3')
+      button(type='submit' name='subject' value='division' class='btn btn-success' role='button' data-toggle='collapse' data-target='#popup') Division 
+ div(class='col-md-4')
+
+
+include footer.pug

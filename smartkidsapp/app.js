@@ -17,13 +17,20 @@ app.get('/login', function (req, res){
 })
 
 //list of available subjects  
-app.get('/quizzes', function (req, res){
-  console.log("Quizzes page accessed")
-  res.render('quizzes')
+app.get('/quizlist', function (req, res){
+  console.log("Quiz List page accessed")
+  res.render('quizlist')
 })
+
+app.get('/quiz', function (req, res){
+  console.log("Quiz page accessed")
+  res.render('quiz')
+})
+
 
 app.get('/math', function (req, res){
   console.log("Math page accessed")
+  res.render('math')
 })
 
 //list of cool hobbies such as gardening cam, security cam
